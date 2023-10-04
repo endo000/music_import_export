@@ -7,18 +7,6 @@ from spotipy.oauth2 import SpotifyOAuth
 from track import Track, read_tracks_json
 
 
-# results = sp.current_user_saved_tracks()
-# for idx, item in enumerate(results['items']):
-#     track = item['track']
-#     print(idx, track['artists'][0]['name'], " – ", track['name'])
-
-
-# results = spotify.search(q='artist:' + name, type='artist')
-# search = sp.search(q=f"track:Анимешница", type='track')
-# search = sp.search(q=f"track:{'SAD'}%20artist:{'XXX'}", type='track')
-# print(search)
-
-
 def compose_query(track: Track) -> str:
     query_list = []
     if track.title is not None:
